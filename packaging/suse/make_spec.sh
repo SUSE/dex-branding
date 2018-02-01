@@ -46,7 +46,7 @@ License:        Apache-2.0
 Group:          Applications/Internet
 Url:            https://github.com/kubic-project/$GITREPONAME
 Source:         ${SAFE_BRANCH}.tar.gz
-Provides:       caasp-dex-branding
+Provides:       caasp-dex-branding = %{version}
 
 ExcludeArch:    %ix86
 
