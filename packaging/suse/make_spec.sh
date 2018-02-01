@@ -46,6 +46,7 @@ License:        Apache-2.0
 Group:          Applications/Internet
 Url:            https://github.com/kubic-project/$GITREPONAME
 Source:         ${SAFE_BRANCH}.tar.gz
+Provides:       caasp-dex-branding
 
 ExcludeArch:    %ix86
 
@@ -61,7 +62,8 @@ Branding themes for caasp-dex
 install -d -m 0755 %{buildroot}/%{_datadir}/caasp-dex
 install -d -m 0755 %{buildroot}/%{_datadir}/caasp-dex/web
 install -d -m 0755 %{buildroot}/%{_datadir}/caasp-dex/web/themes
-cp -R caasp %{buildroot}/%{_datadir}/caasp-dex/web/themes/
+install -d -m 0755 %{buildroot}/%{_datadir}/caasp-dex/web/themes/caasp
+cp -R $NAME/* %{buildroot}/%{_datadir}/caasp-dex/web/themes/caasp
 
 %files
 %defattr(-,root,root)
