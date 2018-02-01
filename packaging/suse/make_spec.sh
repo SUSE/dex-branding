@@ -45,7 +45,7 @@ Summary:        Branding for caasp-dex
 License:        Apache-2.0
 Group:          Applications/Internet
 Url:            https://github.com/kubic-project/$GITREPONAME
-Source:         ${SAFE_BRANCH}.tar.gz
+Source:         %{name}-%{version}.tar.xz
 Provides:       caasp-dex-branding = %{version}
 
 ExcludeArch:    %ix86
@@ -54,7 +54,7 @@ ExcludeArch:    %ix86
 Branding themes for caasp-dex
 
 %prep
-%setup -q -n ${GITREPONAME}-${SAFE_BRANCH}
+%setup -q
 
 %build
 %install
