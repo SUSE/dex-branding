@@ -73,5 +73,11 @@ cp -R $NAME/* %{buildroot}/%{_datadir}/caasp-dex/web/themes/caasp
 %dir %{_datadir}/caasp-dex/web/themes/caasp
 %{_datadir}/caasp-dex/web/themes/caasp/*
 
+%if 0%{?suse_version} < 1500
+%doc LICENSE
+%else
+%license LICENSE
+%endif
+
 %changelog
 EOF
